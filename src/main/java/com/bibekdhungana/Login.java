@@ -61,11 +61,14 @@ public class Login extends HttpServlet {
 				request.getRequestDispatcher("login.jsp").forward(request, response);
 			} else {
 				// displaying result from result set
+				
+				LoginInfo loginInfo = new LoginInfo(email, dbPassword);
 
-				request.setAttribute("email", email);
-				request.setAttribute("password", password);
-				System.out.println("Email: " + rs.getString(1));
-				System.out.println("Password:" + rs.getString(2));
+//				request.setAttribute("email", email);
+//				request.setAttribute("password", password);
+//				System.out.println("Email: " + rs.getString(1));
+//				System.out.println("Password:" + rs.getString(2));
+				request.setAttribute("loginInfo", loginInfo);
 
 				request.getRequestDispatcher("congratulations.jsp").forward(request, response);
 			}

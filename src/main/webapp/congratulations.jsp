@@ -19,8 +19,8 @@
 	<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
 		<div class="text-center pt-2 container">
 			<h2>Successfully logged in with following credentials</h2>
-			<div class="alert alert-success" role="alert">Email: ${email}</div>
-			<div class="alert alert-success" role="alert">Password:${password}</div>
+			<div class="alert alert-success" role="alert">Email: ${loginInfo.getEmail()}</div>
+			<div class="alert alert-success" role="alert">Password:${loginInfo.getPassword()}</div>
 		</div>
 	</div>
 
